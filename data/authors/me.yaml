@@ -2,115 +2,89 @@ schema: hugoblox/author/v1
 slug: me
 is_owner: true
 name:
-  display: Dr. Alex Johnson
-  given: Alex
-  family: Johnson
-  alternate: ''  # Example: 王伟
-  pronunciation: ''  # Example: Wáng Wěi
-  pronouns: he/him
-postnominals:
-  - PhD
-  - MIEEE
-status:
-  icon: "☕️"
-role: Senior AI Research Scientist
-bio: |
-  Alex Johnson is a Senior AI Research Scientist at Meta AI. His research
-  has been published in top conferences like NeurIPS and ICML, with over
-  10,000 citations. Alex is passionate about pushing the boundaries of AI
-  while ensuring ethical development.
+  display: 柯奇画
+  alternate: ''
+  pronunciation: ''
+role: 助理研究员（博士后，清华大学"水木学者"）
+bio: 土壤侵蚀与水土保持研究
 
 affiliations:
-  - name: Meta AI
-    url: https://ai.meta.com/
+  - name: 清华大学 水利系
 
 links:
-  - icon: at-symbol
-    url: mailto:alex.johnson@example.com
-    label: E-mail Me
-  - icon: brands/x
-    url: https://x.com/example
-  - icon: brands/github
-    url: https://github.com/example
-  - icon: brands/linkedin
-    url: https://www.linkedin.com/in/example/
+  - icon: hero/envelope
+    url: mailto:keqh@mail.tsinghua.edu.cn
+    label: 邮箱
   - icon: academicons/google-scholar
-    url: https://scholar.google.com/citations?user=example
-  - icon: academicons/orcid
-    url: https://orcid.org/0000-0002-1825-0097
+    url: https://scholar.google.com/citations?user=XergCM4AAAAJ&hl=en
+    label: Google Scholar
+  - icon: academicons/researchgate
+    url: https://www.researchgate.net/profile/Qihua-Ke
+    label: ResearchGate
 
 interests:
-  - Large Language Models
-  - Computer Vision
-  - Reinforcement Learning
-  - AI Ethics
+  - 土壤侵蚀与水土保持
+  - 喀斯特地区土壤地下流失
+  - 坡面产流产沙与水沙运移尺度效应
+  - 冻融侵蚀
+  - 径流与泥沙输移的全球尺度规律
 
 education:
-  - degree: PhD Computer Science
-    institution: Stanford University
-    start: 2015-09-01
-    end: 2019-06-30
-    summary: |
-      Thesis on scaling laws for neural language models. Published 5 papers in NeurIPS and ICML.
-    button:
-      text: Download dissertation
-      url: /resume.pdf
-      icon: hero/arrow-down-tray
-  - degree: MS Computer Science
-    institution: Carnegie Mellon University
-    start: 2013-09-01
-    end: 2015-05-31
-  - degree: BS Computer Science
-    institution: MIT
-    start: 2009-09-01
-    end: 2013-05-31
+  - degree: 自然地理学 博士
+    institution: 北京师范大学 地理科学学部
+    start: 2019
+    end: 2024
+  - degree: 自然地理学 硕士
+    institution: 北京师范大学 地理科学学部
+    start: 2016
+    end: 2019
+  - degree: 地理科学 学士
+    institution: 湖北大学 资源环境学院
+    start: 2012
+    end: 2016
 
 experience:
-  - role: Senior AI Research Scientist
-    org: Meta AI
-    start: 2020-01-01
+  - role: 助理研究员（博士后，"水木学者"）
+    org: 清华大学 水利系
+    start: 2024-07
+    end: 至今
     summary: |
-      Leading research on multimodal AI systems. Contributed to Llama 2 and other open-source models.
-    button:
-      text: View portfolio
-      url: /
-      icon: hero/arrow-down-tray
-  - role: AI Research Intern
-    org: OpenAI
-    start: 2019-06-01
-    end: 2019-12-31
+      主持国家自然科学基金面上项目"基于泥沙输移规律的西南喀斯特地区土壤地下流失研究"（42507438）。
+  - role: 博士研究生
+    org: 北京师范大学 地理科学学部（张科利教授课题组）
+    start: 2019
+    end: 2024
     summary: |
-      Worked on GPT-3 scaling. Co-authored paper on prompt engineering.
+      西南喀斯特地区水沙运移多尺度时空变化特征。
 
 skills:
-  - name: Technical Skills
+  - name: 专业技能
     items:
-      - label: Python
-        level: 5
-      - label: Machine Learning
-        level: 5
-      - label: Cloud Computing
-        level: 4
-  - name: Research & Communication
-    items:
-      - label: Academic Writing
-        level: 5
-      - label: Conference Presentations
-        level: 4
-      - label: Grant Proposals
-        level: 4
+      - label: ArcGIS / ENVI
+        description: 空间分析与遥感解译
+      - label: Origin / MATLAB / SPSS
+        description: 数据分析与建模
+      - label: R / Python
+        description: 统计分析与文献挖掘
+      - label: EndNote
+        description: 文献管理
 
 languages:
-  - name: English
+  - name: 中文
     level: 5
-    label: Native
-  - name: Spanish
+    label: 母语
+  - name: 英语
     level: 4
-    label: Fluent
+    label: 熟练
 
 awards:
-  - title: Best Paper Award
-    awarder: NeurIPS
-    date: "2022-12-01"
-    summary: Awarded for groundbreaking work on efficient training of large models.
-    icon: hero/trophy
+  - title: 清华大学"水木学者"计划
+    awarder: 清华大学
+    date: "2024-06"
+  - title: 中国博士后科学基金面上资助
+    awarder: 中国博士后科学基金会
+    date: "2026-07"
+  - title: 国家奖学金
+    awarder: 教育部
+  - title: 国家励志奖学金
+    awarder: 教育部
