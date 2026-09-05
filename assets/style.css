@@ -1,0 +1,179 @@
+/* 学术主页样式 — 柯奇画
+   设计原则：单一无衬线字体族、暖白底、深松绿单色点缀、细线分隔、大量留白 */
+
+:root {
+  --bg: #fafaf8;
+  --card: #ffffff;
+  --text: #23262b;
+  --muted: #6f7680;
+  --accent: #1c6e5c;
+  --accent-soft: #e9f2ee;
+  --line: #e7e7e2;
+  --max: 960px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+    "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+/* ---------- 顶栏 ---------- */
+header {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(250, 250, 248, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+.nav {
+  max-width: var(--max); margin: 0 auto; padding: 14px 24px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.nav .brand { font-weight: 700; font-size: 17px; color: var(--text); }
+.nav .brand:hover { text-decoration: none; }
+.nav .links { display: flex; gap: 26px; align-items: center; font-size: 15px; }
+.nav .links a { color: var(--muted); }
+.nav .links a:hover { color: var(--accent); text-decoration: none; }
+
+/* ---------- 首屏 ---------- */
+.hero {
+  display: grid; grid-template-columns: 1fr auto; gap: 56px;
+  align-items: center; padding: 72px 0 56px;
+}
+.hero .kicker {
+  color: var(--accent); font-size: 14.5px; font-weight: 600;
+  letter-spacing: 0.06em; margin-bottom: 10px;
+}
+.hero h1 { font-size: 38px; font-weight: 700; line-height: 1.25; margin-bottom: 6px; }
+.hero .role { color: var(--muted); font-size: 16.5px; margin-bottom: 18px; }
+.hero .intro { max-width: 560px; color: #3a3f46; margin-bottom: 26px; }
+.hero .cta { display: flex; gap: 12px; flex-wrap: wrap; }
+.btn {
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 8px 18px; border-radius: 999px; font-size: 14.5px; font-weight: 500;
+  border: 1px solid var(--line); background: var(--card); color: var(--text);
+  transition: all .15s ease;
+}
+.btn:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+.btn.primary:hover { opacity: .88; color: #fff; }
+.avatar {
+  width: 236px; height: 236px; object-fit: cover;
+  border-radius: 20px; box-shadow: 0 12px 32px rgba(35, 38, 43, .12);
+}
+
+/* ---------- 数据带 ---------- */
+.stats {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+  padding: 26px 0; margin-bottom: 64px;
+}
+.stat { text-align: center; border-left: 1px solid var(--line); }
+.stat:first-child { border-left: none; }
+.stat b { display: block; font-size: 27px; font-weight: 700; letter-spacing: .01em; }
+.stat span { color: var(--muted); font-size: 13.5px; }
+
+/* ---------- 区块 ---------- */
+section { margin-bottom: 58px; }
+h2 {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 20px; font-weight: 700; margin-bottom: 22px;
+}
+h2::before {
+  content: ""; width: 4px; height: 18px; border-radius: 2px;
+  background: var(--accent);
+}
+h2 .more { margin-left: auto; font-size: 14px; font-weight: 400; }
+
+/* 研究方向 */
+.interests { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 32px; }
+.interest { padding: 13px 18px; background: var(--card); border: 1px solid var(--line); border-radius: 10px; }
+.interest b { display: block; font-size: 15px; margin-bottom: 2px; }
+.interest span { color: var(--muted); font-size: 13.5px; line-height: 1.55; }
+
+/* 论文条目 */
+.papers { list-style: none; }
+.papers li { padding: 14px 0; border-bottom: 1px solid var(--line); }
+.papers li:last-child { border-bottom: none; }
+.paper-meta { display: flex; gap: 8px; align-items: baseline; margin-bottom: 2px; }
+.paper-meta .year { color: var(--accent); font-size: 13.5px; font-weight: 600; flex-shrink: 0; }
+.papers .title { font-size: 15.5px; font-weight: 600; }
+.papers .authors { color: var(--muted); font-size: 13.5px; margin-top: 3px; }
+.papers .authors b { color: var(--text); font-weight: 600; }
+.papers .venue { font-size: 13.5px; color: var(--muted); margin-top: 2px; }
+.papers .venue i { color: #3a3f46; }
+.chip {
+  display: inline-block; margin-left: 8px; padding: 1px 9px; vertical-align: 1px;
+  font-size: 11.5px; font-weight: 500; color: var(--accent);
+  background: var(--accent-soft); border-radius: 999px;
+}
+
+/* 项目 */
+.lead-projects { display: grid; gap: 12px; margin-bottom: 20px; }
+.project {
+  padding: 14px 18px; background: var(--card);
+  border: 1px solid var(--line); border-left: 3px solid var(--accent); border-radius: 8px;
+}
+.project b { font-size: 15px; display: block; }
+.project span { color: var(--muted); font-size: 13.5px; }
+.part-projects { color: var(--muted); font-size: 14px; }
+.part-projects li { margin: 5px 0 5px 18px; }
+.part-projects li::marker { color: #c4c8cd; }
+
+/* 荣誉/杂项 */
+.plain-list { list-style: none; }
+.plain-list li { padding: 9px 0; border-bottom: 1px solid var(--line); font-size: 14.5px; display: flex; gap: 14px; }
+.plain-list li:last-child { border-bottom: none; }
+.plain-list .when { color: var(--accent); font-size: 13px; font-weight: 600; flex-shrink: 0; width: 76px; padding-top: 2px; }
+.plain-list .what b { font-weight: 600; }
+.plain-list .what span { color: var(--muted); font-size: 13.5px; }
+
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+.two-col h2 { margin-bottom: 16px; }
+
+/* ---------- 论文页 ---------- */
+.page-head { padding: 56px 0 8px; }
+.page-head h1 { font-size: 30px; margin-bottom: 6px; }
+.page-head p { color: var(--muted); font-size: 15px; }
+.group-title { margin-top: 44px; }
+.refs { list-style: none; counter-reset: ref; }
+.refs li {
+  counter-increment: ref; position: relative;
+  padding: 13px 0 13px 40px; border-bottom: 1px solid var(--line); font-size: 14.5px;
+}
+.refs li::before {
+  content: counter(ref); position: absolute; left: 4px; top: 16px;
+  color: #b9bec5; font-size: 13px; font-variant-numeric: tabular-nums;
+}
+.refs b { font-weight: 600; }
+.refs i { color: #3a3f46; }
+
+/* ---------- 页脚 ---------- */
+footer {
+  border-top: 1px solid var(--line); margin-top: 40px;
+  padding: 26px 0 40px; color: var(--muted); font-size: 13.5px;
+  display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;
+}
+
+/* ---------- 响应式 ---------- */
+@media (max-width: 760px) {
+  .hero { grid-template-columns: 1fr; gap: 28px; padding: 44px 0 36px; }
+  .hero h1 { font-size: 30px; }
+  .avatar { width: 170px; height: 170px; }
+  .stats { grid-template-columns: repeat(2, 1fr); gap: 18px 0; }
+  .stat:nth-child(3) { border-left: none; }
+  .interests, .two-col { grid-template-columns: 1fr; }
+}
