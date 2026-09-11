@@ -146,6 +146,8 @@ h2 .more:hover { background: var(--accent); color: #fff; text-decoration: none; 
 .plain-list .when { color: var(--accent); font-size: 13px; font-weight: 600; flex-shrink: 0; width: 76px; padding-top: 2px; }
 .plain-list .what b { font-weight: 600; }
 .plain-list .what span { color: var(--muted); font-size: 13.5px; }
+.plain-list .what .book { display: block; color: var(--text); font-size: 14px; }
+.plain-list .what .book + .book { margin-top: 4px; }
 
 .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
 .two-col h2 { margin-bottom: 16px; }
